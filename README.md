@@ -2,7 +2,7 @@
 <p><b><i>Change the world how it looks.</i></b><p>
 
 Welcome to Brainmake's what's making Brainmake.
-In our community, we focus on <b>5</b> different hardware that's:
+In our community, we focus on <b>7</b> different hardware that's:
 <ul>
  <li>Accessable by <b>you</b></li> 
  <li>Making users <b>enjoyed</b></li>
@@ -17,6 +17,8 @@ In our community, we focus on <b>5</b> different hardware that's:
  <li>Muse - Community made music app.</li> 
  <li>Kosh - Code language to do everything.</li> 
  <li>brainAI - Community made personal AI.</li> 
+ <li>Museplay - Community made, non subscriptive music app.</li>
+ <li>Chitchat - Community made messaging app</li>
 </ul>
 <p>We here specifically thank you for joining Brainmake. With you, we can make what you want and how.</p>
 
