@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainmake</title>
+    <style>
+        body{
+            font-family: 'Creato Display', sans-serif;
+        }
+        .header{
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 0;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            margin-top: -10px;
+            z-index: 9999;
+        }
+        .blank{
+            height: 100px;
+        }
+        .blank-small{
+            height: 20px;
+        }
+        .blank-10px{
+            height: 10px;
+        }
+        .intro-header{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .intro-text{
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .intro-whole{
+            width: 100%; /* Fills the length */
+            height: auto;
+            box-sizing: border-box; /* Includes padding in the width calculation */
+            margin: 0; /* Removes margins that might cause offset */
+            padding: 120px 50px 50px 50px; /* Top padding (120px) accounts for the fixed header */
+    
+    /* Background Fixes */
+            background-image: url("https://lh3.googleusercontent.com/rd-d/ALs6j_FFG3CExHEjm-n36lW4ecAFYeRp-DNrLllxxvG-GPmNHgjV4s5rG0rh1WGOHu_LKHupsR9Y1jegkUzvQf1kaAcKvMWKh7pcOTGRSM4-uyc6hHLJYXzUx9o6RXMg5oxi_2A8D0CzjL3yHTBfxhp5exjkhbnYYdu7iXhDP0v-mcemRBRwL8sPH21N-ZwXCLAlXpiPNasOv3B9Ekwz18E261c0oJPCjKdzBdaPIZRnxUF-9MfvmKWbmQ_-bsOGFa6ggMTZZ3grhLywXkEgV8-zzu_6g3dGEP3pYYqry1w0Ol-5TxDY85WLrjB4J4WqUZEqTQh-FQP8iOGxDk1XbcFoB6igPlLE76r8bUz0Ai9jMs2-NlOg2SnjbFMQyP-cekf3ttdiRxc5R6eRKwylni8pi4GAo8UI59d6c7Nk0-V8hIE8TOuniCRDpKsfuUA3FcH2LNcpT4d29ko0_AAqqOf206csvbcGzZUdTbZcOlcxm1_Cciyf1vDCIMYTw8zRirsnr42htpwvlPVkUpRFSCyCjlnJbCOc8kwT_AqLAQAywu9oUDuRVyp-LZj-g7grJa1-6nd6ZUswQXR6SYIhTamrPmL7Rsqxr4HjcRYmP09F6fJrjt_nTmzhfC7I0xJ51uHgcoH5HRHCTRGd-rsAP6qSvdcN0O8nw3rpM-DegiT6L_bkieAExq14CHO3QBF3vHjUQ2NPwBDu90CIcErlJpantiN-QHSu6fWnJVD9mg6tX5s37pj5A6te6Y8pb6FA8X4bHoIv20g3n4hqFNeB4l6uETm4jlOp0zZ-lOjn0aEYQjJajUHRwLsj1igYGx_jYXU0fCv1nIzmB5XJLzJN2sFK76FUFyuIlNnufLtDVXLlEhFB5XiZt0pe2sMQn20OxFlQHqfOXuIl-toDzPkdzDRk-_wRakEzotNgo0t7P_DfvNFT7e3I0qvgRP7WV8EfErJbkNx64IKD-lcBSDw5PIPg9fA0T7Vi2KzM31REuk9hLljS5n1youujth9r7MEBfhrqh_f359Pcmdq-8uTWmK8HNcuFOt5mTsCtK2AOvW_MKn-Yj0xjVW_GZYO9ebMX3c9TPGYGvhDF9XDNZoD6JwdMkoYDUs8PkhcT1vXlBriz_PklkyhMcyJRaODT6FVQCSX6s6mnqWLsbBNHHctZn0CrKjc=w981-h767?auditContext=prefetch");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+    
+    box-shadow: 0 4px 8px #00000010;
+        }
+        .the-remaining-part{
+            width: 70%;
+            margin: 40px auto;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+        }
+        footer{
+            text-align: center;
+            background-color: #eeeeee;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .box-of-coming-soon{
+            height: 300px;
+            width: 250px;
+            margin: 40px auto;
+            padding: 0px;
+            font-size: 20px;
+            text-align: center;
+            color: #000000;
+            box-shadow: 0 6px 10px #000000;
+            display: inline-block;
+            border-radius: 20px;
+            margin: 5px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        /* Container to keep content from hitting the screen edges */
+/* Container to space logo and menu */
+.header-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* The Dropdown Wrapper */
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* The clickable/hoverable button */
+.menu-button {
+    background: none;
+    border: none;
+    font-family: 'Creato Display', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* The ACTUAL List */
+.menu-list {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 10px 0;
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    z-index: 10000;
+}
+
+/* Show the list when hovering over the menu div */
+.menu-dropdown:hover .menu-list {
+    display: block;
+}
+
+/* Styling the list items */
+.menu-list li a {
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.menu-list li a:hover {
+    background-color: #f5f5f5;
+    color: #007AFF;
+}
+
+/* Mobile Tweak: Stack them if the screen is too small */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none; /* Hide on mobile or switch to a hamburger icon later */
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class="header-container">
+        <a href="brainmake.html">
+            <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_HBemGh3cM6QsbLnymA3GkbFIV2VsrRpEJYVi7mMMqkdvhAVtAGf1gffs02AxGcFZobmrq1bxq04JcYQF2mqI66BSNBn41moREECvZf2iLqLwbahvcDArXGEewU6Flcm6Fh3ZkP4lAsLw0XRZxj_uJxpN04RUBR70UWlUdiAz-eVAiWsR1O4AmMK5xdIcpepRU3RwO96DPXpVA6qfurvSc8jj1gPZtPrEKIJcqgOMRFvFxkoXs572bqRrkcWhnFMYUoET7bmiEj9oaS0sqrcDqd6lfmtv4lPUxCkUX4ZIOlGHdukh7CXnAwb2dDSd4Tgc_qGClSpqaT9COEdf1NVdmxz6F1cW6BHWcWyhm9OrfrXFtXBS-Z55eYgljphcprc-ufvMK0nSYQeLgYgZxILpi0NEWCYCiFXt0RLBbknuvcrvvpkVSK94jTKERx0CfaXngqZ9MQRddqJkl0SiCQgL0niO64HE_AzZxNL2hQnjb9b7x9l_nf87PZBSZlb152CfkH3KbXoWOuHPLLkgnytJCy7ngFEbIm9OLdhwLDL00af5baisV6AP0uVJMsdx3aBuVXfQlVzah-rWnVIIiHtgbLHxe0ANdGnchr6JCdCA3YdeF3IhUoHBJEanTyuFUOBoDjpkehr1JYs31v_joN0cOUewETTLR1bvoPutDhHgrf0-BvB6SyxXY9PwoHjJzAqZ77G862BeoV947qA3wFGJLO5bhYRT321LHgRpBoMjH5abtYjrkuHVFi-xoel9uloxEU7IeJ66fWww57atUcqPTUHISgX4UwpImriZt9EXJ21fWG25KrGP3PXcTTz8Yah4F4M8NkW7f3ufG-EqHJ6Q1Cht3ZscbOHjw9aP7gD8VOx0HZ6O84Akl9MQt4-GMRyYcDtpUHDa7satFQQtyoD6z90cJMruHZNvN_Mgy4vnWoGxEVCUPaTBHP3imJTdHvMKPE0LXwdSw6IOkZym4tJo7-5zS6wemuTQ1RVV6-1YOeGa6OpQywqj_8yv_vTob14i5QFAdWla7Uab2GVTyCDZs93G_Mr2fbN7BYMrEH8t_Y-2IOyh92wXLW7Le-7P0vkfWAKRh7KFuEu_zohPttrfUtfGg2guXXcfPQ2Si7IdP--p88iYn8O92v1gPh8Q4dP0Y=w1389-h767?auditContext=prefetch" alt="Brainmake logo" style="width:100px;">
+        </a>
+
+        <div class="menu-dropdown">
+            <button class="menu-button">Products ▾</button>
+            <ul class="menu-list">
+                <li><a href="diverseos.html">diverseOS</a></li>
+                <li><a href="kosh.html">Kosh</a></li>
+                <li><a href="brainai.html">brainAI</a></li>
+                <li><a href="argon.html">Argon</a></li>
+                <li><a href="museplay.html">Museplay</a></li>
+                <li><a href="chitchat.html">Chitchat</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="intro-whole">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    <div class="intro">
+        <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_GumNciR6Vy4g3w2iePDYT7Fhj7nq7LSLYHOKpRvNtVfR_Y8DcYNp2ZRxV7lsFWDK7s2p9Yie7XqKT3EdJjNTZ8sMTdlVh83lfFwci54eB9GcdN4xjndcyFwU5PrC3LnUNLVWJQ9fQVQoql6sB5FhKo76BNskVCwaDSiv7NaOeEuTcG8xaw0qQ7YTaATWRp1hMqNF0WsnT5fRnsZVgM1d6u8hmuk2urt0HYZ_IeC8ISrvbrQ2O0KjF09dOpeZkN-F4E-Fb2Sb7CtF71K8Ic5AfQOTOUihDSQdsuvUn9ntZT_qMblEXr5kHDbQx9TGBJgVO5yYddZAJFdG8tvbsWOIeiDkljOFSBZ0oidTXQl_cNEi-09ap-fkaHABsn99kfVq51_EvkitbQCT8hSdjvYWv0Nnb46mEU5TGV9CloVBEKRg5gtTidHp0HkWr6eanqhXufdLqOYlhSndOUwZ4Zw9hMaZOjTnu-zRDO8Uyvqlz61MD0Wr-3ZT1uRBG5qEP5o4IVktPEVLV4UbD5Urp487CENjXqjcAVJcWEnLXsw7sNTUcXT5OqQrnFfAym5w9DsS-IMjTwmGdIVgvk0UR5o85Us8Kamj6Ofje3Y2iEYVR6C1PjamIKfTSQl6r_JsH_r2zqHM3JxYjUOz5J-gD3FCJ_ZRFemFngpvlZLwLCuGmmmrixeX-sQ97rZhvSO3uhgT8Rh31uOf1I6L-06-QBPc40lSkZtS_TP2R0T9VxcARsbqFC9zLmkTKVhXxdI0rMyvwb_rui1xCVOoPAzaIRqiSnDoYmG6qgUXmfxlV8s371h-bn8WMtJ5N9qhy81nLBlaVZ8uZ6KHWMBVs5bPfOcHn5unGZ4vM5mKaGsIDuLq7-1PI-_SWy3lnNwZ0oTgkVQJzV8SLWtOgcWQsFSgXBa5Hq0d6CkdTiQv3jXv3gplPUzCgu1yNRwr7-lV4nYWMtqX-UWDoKOOWoghPOOrnfDXL5QLfIJwLFCDFHAgflbLZCAVflUISaijiRsd-YodYZIJgBSrqOqDc-WdV9-6J4DL0gt8UHpj_BTV6iwqQrB6L-G8zPuFOFWtD3fzhjVROVKTswF4XQUjDRI29lLjlyEqsNx0FGjRDzOl2bJ41kWa8ObhaYfs_H6ar5bcu2gdfbdDP50gdRWHs6S1bnRJ_DwaIL=w981-h767?auditContext=prefetch"; width=10%;></img>
+    </div>
+    <br>
+    <div class="intro-header">
+        Change the world how it looks.
+    </div>
+    <div class="blank-10px"></div>
+    <div class="intro-text">At Brainmake, we are making some products that are not imitating the user, and researching what people love and what they don't. This includes OS optimisation, AI opinions, no subscription baseline and less ads. With the opposite side of what are companies doing, we are in a line of user based systems.</div>
+    <br>
+    <div class="intro-text" style="font-size: 10px;">Abstract, by Brainmake Art Group</div>
+    </div>
+    <div class="the-remaining-part">
+        And the products...
+        <br>
+        What do we have here?
+        <br>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:20px;">
+            <div class="box-of-coming-soon" style="display:flex;">
+                <a href="diverseos.html" role="button" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;height:100%;width:100%;box-sizing:border-box;padding:12px;">
+                    <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_HqOPVtNFOtVp4dXKIbGii86_QuNlk4aDVX9d2pmm8-8ULlemozIk2IqnlnX0-8_r63Kb_4N-dng2ONH3Q7wO9hHg74BNQQrv2000j8FUUnNDXBp7nDmAWdsAZ7f7Edth7OEYXOKUjT1yZ_agtvcPlf7VhzMnECkthWAX35GOBJOT8i94AMDN17LFHSMBBITttJ35-oKK_SHT8cB-z8iQD-HYt8Pm1uTXjEnDYM3wNxX4LyZlSJ8l-MC2kxWJvEQhJAEuORC9_6-x5Fcqt-7XbLY_wUw4MqYaOszlaVVXCDHali5rS5VcTd82TCCIaoMcmXm_tAnWkORjjyIk6AwcwSHnEvKW_2YwgC6aa77vhRQ5GFl-zrJUKo1BfMuJrXzNSQ9ehg4_dzif_rM-L-2Nv-prSzPar4_XK1tCkuZusDHnWL_ws91YYJtpUSCp4CtMMCHLxBye6y9utudfJfLMDKqFHqpQl5CHA-uhNTAflISC2_WxgQ5GzRRKplbI_yWeAWeDWc9FC8s63QBuHikplJZ8fmjPggtyyjBPIA43XkCah4CTxAqMa6ZvBSY-T-wErvHrP44Z5lV582hGDsabvetSPYQTkKTuJaKSuFTuG8jQBt_QnEmAfSRLIjVLVWqqvTD5BH3hE1vgt0VQptpSjXux4-j2nobo4dvMntlBSUIKLg1VrpEDr0E6PN0h9IrWUTGBEa8ph7tegWUAhyC4RqkaeIueYc0Mqu4gq8zIiHWqaSsxX0dnLGkkNYm7NeXiKjBvqp9Ex1oPa4Ji3cp__w6AKPUY2YHGT8pqWCI_AtHl5trAHrh6c5vmeInBifn6L6i0e5_N_EA_1DDhkADp95HQMApMPNaLU0ogfZPPHdFo19kXYfRQvsxZXdOCHxxtelZDOeYyhECLa64XRKeUkex1Dx_e-sgPeXsZVEGgVkxEBOm2HG3y7awYb1xPMvUj9zNIfqmOXnEok5EUaJg9wVAtZ2h_dyaRRUC2EQlXrW8FYOYIkaN8n2pMDuKb0Oss__fCAyx0idveaAkZ4aJkY_Q_eHtZZrDAOC8FRBnILGzy3T1eKG6CIBpM1MRHDOTAnBsRQKTTeVvsy5TMzUxX6klvtst3nBw6ZUujRa3JLx_SIBMjioY5onfsU5YcB1ht4TvOcV1d4-S77mvuxWdeA=w1389-h767?auditContext=prefetch" alt="diverseOS logo" style="width:80px;height:auto;">
+                    <p style="font-weight:bold;margin:12px 0 4px;text-align:center;">diverseOS</p>
+                    <div style="text-align:center;margin-top:auto;">The OS made with your suggestions. It's as optimized and intuitive as you've always wanted. Coming soon this year.</div>
+                </a>
+            </div>
+
+            <div class="box-of-coming-soon" style="display:flex;">
+                <a href="kosh.html" role="button" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;height:100%;width:100%;box-sizing:border-box;padding:12px;">
+                    <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_FZiLbJn68nJKHLi93_7HqzgDWQol99E9krpliI25GZN2RRKkSK6bpcGzE7Y339DlB4Ep591relWHLJQDOsNLlydd0G56Ng_Ta66ACQR-6_y9G540DGvoF5t2fheZ1qGZEZEEi9gGhM5eMqPB8MKnWLECGWi8LsaAMb2nb9SGEbWm6X-Xd1sKMSFUOSwyn8lKAZojUyi3lrsmHhCBy-sQMDu6KCD4516l7CYI0nBBMBUykJAPN-jpl54qYhQPZk_Jt2ckn_is3YD-lEjR7s8ZTNbNbAcXkl0nQa_Ow1rV-82fTec436lPfg7ez1n_rzjaRQ0zJiaT7Ct9klqb612bQA8CTDdF4NDX7xvJWFu7KWzbUwyibqR6YKlV4NcDZUaOlCHFAn4XIEebL9GNCriLS4MEJ984Q4eaw05NucE9zESQO_SApvJOeD20XAtTjDoiIOCAapLz_am41J_q2invzT0HES_J9-lRXuH7KTkmKEq2Frf-IJiq55pElgfX1fa1fKEduivSoLJ7ekjiXWGxWANUxYi5UobzX_xxZ7C8-SM5Ca5l87DUg0XfXEac0bNew3utoDw_E3_gDL3DYuMuksoBvqR8GzT14iS8xKtp8vfh-9A5t1mnoYfqbQsUCB72HrjGYux3MZLM_pV50xpRtzr_IHD9UD6-33kq4W7TmwdjYJKf8suNL8bmkMHvwcHIo69DFbZNxmWTHMaEjGV34AvLfGPta68TE7SYpF9AjJ2CCvTUnheEUy71DyO2nJhE1ZRaKlQDGPBAHYUwNfCkmsPzhDd4q8H4vDNf3Qivgt-MzLZfKYpbw-Hq9qcDHob-yrKf9c2vkdRuwj8pwnfYGfeWL1gQ8j9s6v-UQF6vjj_0HUbCJv1uSe3DVI7ZDZi020xE9LqWEEU1ar5GyJhOmX4kWqFiEoOwiSsgkTMWjfUuC2w_xPuRsN1DEbd6fnhITfkvzhepKCWuBoi6TwLgARxpDJLNnborbymS4DZdACq0SHXeQTnkVvVGasKaUJN1azzpvRl6W6s3EzGjw7ygTRO0DoTnvwubZGUkXyGg5EOvL5pwhsFlPKB-zKVZTQ8nHhC3V8TTUb9ImBtM8L0g-K3kyi26AuOhFdloYTqh_aKF8t4sNfdDFPXZ35sqtHMQZjYBPxvqg6oZjDB3mPZmM=w1389-h767?auditContext=prefetch" alt="Kosh logo" style="width:80px;height:auto;">
+                    <p style="font-weight:bold;margin:12px 0 4px;text-align:center;">Kosh</p>
+                    <div style="text-align:center;margin-top:auto;">The coding language of everything, from UI to basic coding. Anything made with you. Coming soon this year.</div>
+                </a>
+            </div>
+        <div class="box-of-coming-soon">
+            <a href="brainai.html" role="button" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;height:100%;width:100%;box-sizing:border-box;padding:12px;">
+                    <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_F6abMwfvlz0uyn4nygDl8Sz42Ygo_BASAhm21JFOTPXm_z_-vuk76NsPh8N4D6fCFgLtTi3pQCmMtgt7x-0XmvBaeKKBnTHKQCLRW0QShfXY3v8AMwqEvAWh02_nvlY20pduRCQ3Fi4D_PzVSKudpiZw0nH1i3qk4d2XZNX0Pv97yB9wz4KwsxQOiBAcFnhAPAJ2u54sg_uGUVp187dAeGjZijaQMhXCDJcjDRQh5luLv5FQfpfERemwAXN8uhpgGrAUAXrS9lOl0y2xCyaZEtB8IBqtiPV9_1KeNyIkr0LQXSttVeG38dkfK_SxnWo82KAtqnLCX5a5_rP4Su1c6zuAoYYjTovd92zeolFwUmXLm9ffV2PkqQ0Bpfa2y3u47jKabH2PzRMKEAD6DaMnsrQyRHuoO5epHKuJQRo7fvG_ntTWtiFC4AZjsM_-uB9IqtcAvr2PwkVlUEH-psT59XkFKSupXPfq52T7tyeAYWhhNUVwYje1Crxg34giRZJCRkTXD4TdCCwBKTN6TdIa-6ipjqnPr8J2b5VgV9ADQnSWhYjbd82NLCuW3aGJPB1RYp3arBSpH0By8wef0vYMSC69i_aVPgkM8XXW7FRkwPCE-usP6xz8ejrotvwmgBaUR-fseSDK0DfoYWTCv2TiYKvhsxfdjVK4RDbAnQ9Ud81tklc7GKj1w81tfe3f-ERA4Sn2kTQgbmkekwhJeSKeg2S_NaG8cp0bGfVAgiKfZNGNZdZp9EGheKKCUDaV7DWHydfRCSL4usJUWj2emorUS_PhLlCkgcgrdI6m2DaTDyoigvHs_LphI8JVxvfw9QMHAqyLpxm12-JNZs1q_igyDGDuQC2cOSXi-HXSpnKeOxe5wIVOvtgv9V0ACqZlFNuAcchO7-0mX8p9No5lpwRETtZelbdcEbHIqoG5m3s-a-AyvARTgaJkTX6CrP5c2dKY-1vStoQQNLKAUB0zq7IvAHqEHkTDQYp-bseCrq_BE_96g_ekx4cgw9F63oh10kf-X8kTIIR6BxtnrofXgWSgZoIZc8JDpKgpMYEx6vvIPgXebN6n4KOhLrxofHhAwxMS4vsPnC6o5-T_FrVjYjnPWKxEQelwBI28iifn9suDD6rzCdFVZy5I2I66uGA-9rqSbOXtdSYOrLLqFy4gFn72O7=w1389-h767?auditContext=prefetch"; width=71px;" alt="brainAI logo" style="width:80px;height:auto;">
+                    <p style="font-weight:bold;margin:12px 0 4px;text-align:center;">brainAI</p>
+                    <div style="text-align:center;margin-top:auto;">Our community made AI for chatting, and more of general purposes with made by you. Coming soon this year.</div>
+            </a>
+        </div>
+        <div class="box-of-coming-soon">
+            <a href="argon.html" role="button" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;height:100%;width:100%;box-sizing:border-box;padding:12px;">
+                    <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_H8D2A9LwqLdu5sHFpNai19HkNbEb9ofB15XdSC_EugBs1Nb13kqYQh7iBvmqBJSlIBRWIClNPI_A25kcw3F6-7CzByhxL-FLRgQwE0z6NliNmdehL99jmuiFEdBVrSoALV3JTbfLLZkd6tMBDoFEIRApGUUe1l4xILk8VYBqohrDDcJddf2iq9wkGTc6H11_orj-K2rB6CEsz8CFcGRQOXrvMLgWq3uhU_6W4LIZSKRLmz1lbYIctTxonG8_V7vZw26WRsbWHABfaR5dYZmBR0CD4891FV1XwT0LCDh1mAoCo0Ll3Gygtj4rTxWh5EQfCxfHQqi6AFmDXkucNI1WtOudubHKyR3hmTGz4sjTc2Gf5bU_tzOMq_gGsHKcNCf2ZnaS9wje-1CiMQ6y7G472WHaDXpHNvF1FyJJ1qs0_70JPUiJ9xpT-1kfxCRh_ML90Rj7rYwEZ1ZgtUx288gXYLXO11dW48hxwOBStt2J-fz3LW9xQgmKT5BiZdIoh0G7dZ0-iUHfszmLukOKNPlkkwSLYab_EHh5pvrMJti0d57Q60gQmPg4Sc6SO8A4AtGgceSbIVeUEQNGsjQ4xyGsMvXfLawNuQGtrU3tznKDUQz4SgCVfEU-VjSFH1WhXHwXqgORo4lCsO5ibM5vJd0N8XjSKtVuSm9LXAcZYmDyqs3VWuY5O7ZiiVl4t3afRISFeuY2OHaB1fseT-nTcVNrRREIc79jIlZXEd491gLLopr2VyS7nf_Y7DHTsGlePwOwVbCt1_Pyviqlu8010CkoHIOWYEOBtoN1JS8dYUPTpg4cefCmewxZtIdNqbDhlv9lqtFIWse8YHi_IrH20f2lvcELGQP92d66Bqi7JmvqpYOUc8qc9cgV6V3FCfxRj0tTAd-Pt4oSxoegGKpffOO_AcL2N65BUYx4A90Iicr4_geMFoMFIoHuhKs_z3OZ6cdGZ0nvwUIUAH53Xhi9K0MLiU0LLaZmY_tuWF8EtemCRYvpctgPk9U2NkS0Dz-Ppa7WzJVN0czGxvS779sTwpLrv9BNw7WwyES8Asd1Y-IJhnyTeoe2GwcNoiIvx15jwHJp9dp5Un7YYAE4hVMAOUl2JDZkuuml9GanZOVPv0KgwOYyU_qKVKxpkyIeG02FX3a5eIfm1U7W-KVLr0QN5LI7vB=w1389-h767?auditContext=prefetch"; width=71px;" alt="Argon logo" style="width:80px;height:auto;">
+                    <p style="font-weight:bold;margin:12px 0 4px;text-align:center;">Argon</p>
+                    <div style="text-align:center;margin-top:auto;">Make, Present, Search. Our native community web browser. Made by you, now search. Coming soon this year.</div>
+            </a>
+        </div>
+        <div class="box-of-coming-soon">
+            <a href="museplay.html" role="button" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;height:100%;width:100%;box-sizing:border-box;padding:12px;">
+                    <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_Gkn_wsA7fLhi1SzBwuiuMoQJJ85m22gMt3tzCb0-iIQc8eDofLK7gxdhCrr9scyGg8efxUSWCQO3GuzXkN8E1py7F49EV4J3ZR93yWlVC-TpKouCtG8oOSMG8atHDLni-Eg3mDGkFNJolirFbWiYSoLV1nX6dTOIdtSqb8ptv2unMqu8YiVymnsfi7X82XbKvDbDwpP0Zstue-UKKW7HDE-TnhJhCLRtBK132TbpCCXiqILceWpVPv2CyuSL6lnfF_ususB08Mw1drEj94zwnACaN90mkD-b2dlYU2wr_TTYOu02qZtxxyyCKcUIwllt9Ec2Yh1kMgfhqdy9gygnYnVv1bOnaRPMGMGzfmEhv11k0fUKoeVGA3EzNEM3iF6zCsItFLSwZGzFUWysEtsTggNlU1OqGBnGIF20GXkf_6reUUoN94ke6f7UMW5OcP05U59Uo5dAvL9pWp-wpz8e_boy19UWyzgXhFCdLyJpR5VzprWmxliri3-M6gK3qWBiWhuiPCWn79dV9RNx6e30NrTvVWIbOEjcXNWARGJQKr7-jsROZfXXRRn2SfdkTJDf0VAKI31-CxDPH9DV_TvFgv9UAE5SVFCdUXlZlmbc8nkqa_9jokisn5Qoc_vGlfHDCTUOI9p88UPazATab_giDONPqdhG6PWMxmLHGTjJ3GML944LnTWmrW0BFQrPQ7cG_6bCf5VLlcn3OlSIR0zu2omQopeRUNap8vlWfswYaKOIuEbszxbe9b6HDKTmtMx58w_2gzrZ2kBIl_nYwEN_puPwCICG37P7UMFO77Lp08L1YwzylZY3KXQpQaUbPfDUuRLiwkdXTE7-50JCl1XXFvKWR6fGcbJGpAf2g47AJ8crzciM7EMGh7R3RMuSenZ2BEhvyGZ95lFlMXrcTvMJOQG1rUpEGrVUX0rDuzcexDihKZqDL-27tKcpozVRPHAYFUiIFVR8-HaqEh2A6Arj-bxwIfSRwDpPGFd5UdkypxRqJdnQ7IqMM3PrhI2wclrJX3aydGOYTuQBj8kv1v-gxZ6jCnnzT88NjcSgwE1Smv9Z5zXqfS2fOiPUi3jTS0IIvI03WuNi0LbGgcRVXUFAMSXfxfc3Pw7EkpBEqx3dBSsBuN6oCx9eNk2FB1kuG-8ugbeiaMJpk9siwY_8rc_IAu=w981-h767?auditContext=prefetch"; width=71px;" alt="Museplay logo" style="width:80px;height:auto;">
+                    <p style="font-weight:bold;margin:12px 0 4px;text-align:center;">Museplay</p>
+                    <div style="text-align:center;margin-top:auto;">Play, pause, forward, backward. Music in everyone's hands. No subscription required. Coming soon this year.</div>
+            </a>
+        </div>
+        <div class="box-of-coming-soon">
+            <a href="chitchat.html" role="button" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;color:inherit;height:100%;width:100%;box-sizing:border-box;padding:12px;">
+                    <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_GVJphnoI7c9mMbrgzwwjj8lsYuqrt1rRg80z829MtIqlrDcR6xTTwJAs_hFVdxeFeb4k7q79z0jSzQxzHX8FGFO9Qup7mLP2nM1Y2PBtbsvHUI3Xp0-bjeqOK314lRE-UBZOEnV7gj-WhHZaR4XCIoBd7OUGY1R5N-w5ld71DSu5eBXqrYAa4uWQuTR-l6HAhV1ZXLlDyScz-PAkMiU0m5EXTS2ctyDqKdU5wGWLM_rszs5cWfPS-jCR0zna7HEKGsYW6mRrP5LML6mX9Z6w-sR5wYCLTebgoPUEWIeGvljvq4544jo9wDZMT5O6dFusB_eKuErfOohytjNFqignA9J4mysCvj5Xcm6BDr7UG3_tPIpPSyA-ZMkFtbEHsAosQm2Iqfhd7AyFZOxqbdvlCU1MCz8oP_bSqkye-sMtE-8AehGlHvHsDqQrhb00sg5q_iYME5SxI1jXnz6rWlr6LxU1qcIBJAEkeSl2xP9G2JXQOhsigCBZl-tuBdB-bqn2boRQx_7EIzpWrUptp_v9iYSxomwuk5VAcNjcQ1TRf2g_jDezN3rFZj6onprkjWJomwtF2YnHWAd6yfFEa75E8Z-QW6Y5MJnUcAVva3s1__qC7zH3FVkfuu71Pk1Ge9lOfNDH10cRWiR64JLlVL67I7EByAKhN-yfO-cymvclg-0iu2K99jKWCD28aAx5_DNjEpmlyhexCrYrOqH9H6Abo0SE7W7d0vXyls11mIBZQEYVHiIHgz1ySnzA69cJRjIW5i2duaPg_z0HJslcIVCiI0_qdK3t_bM-pR-9YBwtksjM1Zfec3b3QWvcvM8j9H0aZrwXkfnDvAwgby7PqG9njp1nIHN3O-gtr-Tb93AAUkW-_MNWQEQIyuU_vINdzEK5qP7sTSLIOXKtlKbVWTdKhPzPHYT5_xgz1GzYi1oN4cAhJx8wE2Aj0YA6PUWPudpY_kfxDOSSc3o5ytjcyc4slM-fppY_LCm_j2wWpepHnCCv1v9xaDPOcHQKsbvJBgVnFGh515vhQmVrQW8_P5eeHd6g6nlLgaoKsLmPHpdZCPVeOymQ45fyVr5sQnB888SYFuLy0KlSqMO8WMd1wzh6XnkRE4yE67wSatc4Ffklc6hIo6VtDcC6RsldWTSwknS5eOCcS24Y9WR6TZovi16M1a=w981-h767?auditContext=prefetch"; width=71px;" alt="Chitchat logo" style="width:80px;height:auto;">
+                    <p style="font-weight:bold;margin:12px 0 4px;text-align:center;">Chitchat</p>
+                    <div style="text-align:center;margin-top:auto;">Hello. Let's talk. Let's make it first then chat. Our native community messaging app. Coming soon this year.</div>
+            </a>
+        </div>
+    </div>
+        <br>
+        It's that simple. It's with you.
+        <br>
+        Coming to you soon.
+        <br>
+        <p></p>
+    </div>
+    <footer>
+        <br>
+        <p style="color: black; padding: 10px;">&copy; 2026 Brainmake. All rights reserved.</p>
+        <a href="https://www.youtube.com/@BrainmakeInc" target="_blank" rel="noopener noreferrer" aria-label="Brainmake YouTube channel" style="color:#000; text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:6px;">
+            <svg width="20" height="14" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.6 2.2c-.3-1.2-1.2-2.1-2.4-2.4C18.9-.6 12 .0 12 .0S5.1-.6 2.8-.2C1.6.1.7 1 .4 2.2.0 4.5 0 8 0 8s0 3.5.4 5.8c.3 1.2 1.2 2.1 2.4 2.4C5.1 16.6 12 16 12 16s6.9.6 9.2.2c1.2-.3 2.1-1.2 2.4-2.4.4-2.3.4-5.8.4-5.8s0-3.5-.4-5.8z" fill="#FF0000"/>
+                <path d="M9.6 4.8l6 3-6 3V4.8z" fill="#fff"/>
+            </svg>
+            <span>YouTube</span>
+        </a>
+        <a href="https://github.com/Brainmake/BMK-Source" target="_blank" rel="noopener noreferrer" aria-label="Brainmake YouTube channel" style="color:#000; text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:6px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/>
+            </svg>
+            <span>GitHub</span>
+        </a>
+        <br>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brainAI | Brainmake</title>
+    <style>
+        body{
+            font-family: 'Creato Display', sans-serif;
+        }
+        .header{
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 0;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            margin-top: -10px;
+        }
+        footer{
+            text-align: center;
+            background-color: #eeeeee;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        .box-of-texts-1{
+            margin: 10px auto;
+            padding: 20px;
+            width: 700px;
+            background-color: #ffffff;
+            text-align: left;
+        }
+        .header-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* The Dropdown Wrapper */
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* The clickable/hoverable button */
+.menu-button {
+    background: none;
+    border: none;
+    font-family: 'Creato Display', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* The ACTUAL List */
+.menu-list {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 10px 0;
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    z-index: 10000;
+}
+
+/* Show the list when hovering over the menu div */
+.menu-dropdown:hover .menu-list {
+    display: block;
+}
+
+/* Styling the list items */
+.menu-list li a {
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.menu-list li a:hover {
+    background-color: #f5f5f5;
+    color: #007AFF;
+}
+
+/* Mobile Tweak: Stack them if the screen is too small */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none; /* Hide on mobile or switch to a hamburger icon later */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+    <div class="header-container">
+        <a href="brainmake.html">
+            <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_HBemGh3cM6QsbLnymA3GkbFIV2VsrRpEJYVi7mMMqkdvhAVtAGf1gffs02AxGcFZobmrq1bxq04JcYQF2mqI66BSNBn41moREECvZf2iLqLwbahvcDArXGEewU6Flcm6Fh3ZkP4lAsLw0XRZxj_uJxpN04RUBR70UWlUdiAz-eVAiWsR1O4AmMK5xdIcpepRU3RwO96DPXpVA6qfurvSc8jj1gPZtPrEKIJcqgOMRFvFxkoXs572bqRrkcWhnFMYUoET7bmiEj9oaS0sqrcDqd6lfmtv4lPUxCkUX4ZIOlGHdukh7CXnAwb2dDSd4Tgc_qGClSpqaT9COEdf1NVdmxz6F1cW6BHWcWyhm9OrfrXFtXBS-Z55eYgljphcprc-ufvMK0nSYQeLgYgZxILpi0NEWCYCiFXt0RLBbknuvcrvvpkVSK94jTKERx0CfaXngqZ9MQRddqJkl0SiCQgL0niO64HE_AzZxNL2hQnjb9b7x9l_nf87PZBSZlb152CfkH3KbXoWOuHPLLkgnytJCy7ngFEbIm9OLdhwLDL00af5baisV6AP0uVJMsdx3aBuVXfQlVzah-rWnVIIiHtgbLHxe0ANdGnchr6JCdCA3YdeF3IhUoHBJEanTyuFUOBoDjpkehr1JYs31v_joN0cOUewETTLR1bvoPutDhHgrf0-BvB6SyxXY9PwoHjJzAqZ77G862BeoV947qA3wFGJLO5bhYRT321LHgRpBoMjH5abtYjrkuHVFi-xoel9uloxEU7IeJ66fWww57atUcqPTUHISgX4UwpImriZt9EXJ21fWG25KrGP3PXcTTz8Yah4F4M8NkW7f3ufG-EqHJ6Q1Cht3ZscbOHjw9aP7gD8VOx0HZ6O84Akl9MQt4-GMRyYcDtpUHDa7satFQQtyoD6z90cJMruHZNvN_Mgy4vnWoGxEVCUPaTBHP3imJTdHvMKPE0LXwdSw6IOkZym4tJo7-5zS6wemuTQ1RVV6-1YOeGa6OpQywqj_8yv_vTob14i5QFAdWla7Uab2GVTyCDZs93G_Mr2fbN7BYMrEH8t_Y-2IOyh92wXLW7Le-7P0vkfWAKRh7KFuEu_zohPttrfUtfGg2guXXcfPQ2Si7IdP--p88iYn8O92v1gPh8Q4dP0Y=w1389-h767?auditContext=prefetch" alt="Brainmake logo" style="width:100px;">
+        </a>
+
+        <div class="menu-dropdown">
+            <button class="menu-button">Products ▾</button>
+            <ul class="menu-list">
+                <li><a href="diverseos.html">diverseOS</a></li>
+                <li><a href="kosh.html">Kosh</a></li>
+                <li><a href="brainai.html">brainAI</a></li>
+                <li><a href="argon.html">Argon</a></li>
+                <li><a href="museplay.html">Museplay</a></li>
+                <li><a href="chitchat.html">Chitchat</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <br>
+    <div class="box-of-texts-1">
+        <p style="font-size: 400%">brainAI.</p>
+        <p style="font-weight:bold; font-size: 400%">How can we help you today?</p>
+    </div>
+    <footer>
+        <br>
+        <p style="color: black; padding: 10px;">&copy; 2026 Brainmake. All rights reserved.</p>
+        <a href="https://www.youtube.com/@BrainmakeInc" target="_blank" rel="noopener noreferrer" aria-label="Brainmake YouTube channel" style="color:#000; text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:6px;">
+            <svg width="20" height="14" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.6 2.2c-.3-1.2-1.2-2.1-2.4-2.4C18.9-.6 12 .0 12 .0S5.1-.6 2.8-.2C1.6.1.7 1 .4 2.2.0 4.5 0 8 0 8s0 3.5.4 5.8c.3 1.2 1.2 2.1 2.4 2.4C5.1 16.6 12 16 12 16s6.9.6 9.2.2c1.2-.3 2.1-1.2 2.4-2.4.4-2.3.4-5.8.4-5.8s0-3.5-.4-5.8z" fill="#FF0000"/>
+                <path d="M9.6 4.8l6 3-6 3V4.8z" fill="#fff"/>
+            </svg>
+            <span>YouTube</span>
+        </a>
+        <a href="https://github.com/Brainmake/BMK-Source" target="_blank" rel="noopener noreferrer" aria-label="Brainmake YouTube channel" style="color:#000; text-decoration:none; display:inline-flex; align-items:center; gap:8px; padding:6px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="currentColor"/>
+            </svg>
+            <span>GitHub</span>
+        </a>
+        <br>
+    </footer>
+</body>
+</html>
